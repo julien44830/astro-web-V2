@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>astro web V2</title>
+</head>
+<body>
+    <iframe style="padding:0;margin:0;border:0;"  marginwidth="0" marginheight="0" frameborder="0" scrolling="no" border="0" width="800" height="323" src="https://www.lameteoagricole.net/la-meteo-agricole-partage-web2.php?town=4c2d760f60a6ea70b0a10ef9ff2351f5&ville=FR"></iframe>
+
+
+    <div id="av-orbit">
+        <script>
+            var avOrbitProperties = {
+                size: 'large',
+                lang: 'en'
+            };
+        </script>
+        <script src="https://astroviewer.net/widgets/widgets/orbit.js"></script>
+    </div>
+
+
+    <div id="av-passes">
+        <script>
+            var avPassesProperties = {
+                lon:   2.323,
+                lat:   48.879,
+                name:  'Europe',
+                tz:    'Europe/Paris',
+                lang:  'en',
+                clock: '12h'
+            };
+        </script>
+        <script src="https://www.astroviewer.net/widgets/widgets/passes.js"></script>
+    </div>
+
+    <div id="av-skymap">
+        <script>
+            var avSkymapProperties = {
+                location: {
+                    lon:  2.323,
+                    lat:  48.879,
+                    name: 'Europe',
+                    tz:   'Europe/nantes'
+                },
+                deco: 16399,
+                size: 800,
+                bgColor: '#ffffff',
+                lang: 'fr'
+            };
+        </script>
+        <script src="https://astroviewer.net/widgets/widgets/skymap.js"></script>
+    </div>
+
+</body>
+</html>
