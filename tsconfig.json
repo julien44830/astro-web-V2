@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      // ... (vos options de configuration TypeScript)
+    },
+    "include": [
+      "skyview.d.tscluez vos fichiers TypeScript
+      "skyview.d.ts" // Incluez vos fichiers de déclaration de types TypeScript
+    ]
+  }
+  
