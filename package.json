@@ -9,8 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "astronomia": "^4.1.1",
-    "skyview": "^ 0.0.0"
+    "astronomia": "^4.1.1"
   },
   "devDependencies": {
     "webpack": "^5.88.2",
