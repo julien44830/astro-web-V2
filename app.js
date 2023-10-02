@@ -1,16 +1,16 @@
 // Importez la bibliothèque Astronomia.js
 import { julian, solar, moonposition } from 'astronomia';
-import {SkyView} from 'skyview';
+// import {SkyView} from 'skyview';
 
 
-const sky = new SkyView({
-  container: 'sky-container',
-  latitude: 45.0,
-  longitude: -75.0,
-  date: new Date(),
-});
+// const sky = new SkyView({
+//   container: 'sky-container',
+//   latitude: 45.0,
+//   longitude: -75.0,
+//   date: new Date(),
+// });
 
-sky.render();
+// sky.render();
 
 
 // Obtenez la date julienne actuelle
