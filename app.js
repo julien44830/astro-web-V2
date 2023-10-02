@@ -1,17 +1,5 @@
 // Importez la bibliothèque Astronomia.js
 import { julian, solar, moonposition } from 'astronomia';
-// import {SkyView} from 'skyview';
-
-
-// const sky = new SkyView({
-//   container: 'sky-container',
-//   latitude: 45.0,
-//   longitude: -75.0,
-//   date: new Date(),
-// });
-
-// sky.render();
-
 
 // Obtenez la date julienne actuelle
 const today = new Date();
@@ -24,7 +12,9 @@ const moonPos = moonposition.position(jd);
 // Affichez les résultats dans la page HTML
 const resultElement = document.getElementById("result");
 resultElement.innerHTML = `
-<p>${jd}</p>
+  <p>${jd}</p>
   <p>Position du Soleil : Ascension droite ${sunPos.ra}°, Déclinaison ${sunPos.dec}°</p>
   <p>Position de la Lune : Ascension droite ${moonPos.ra}°, Déclinaison ${moonPos.dec}°</p>
 `;
+
+
