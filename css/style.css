@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+}
+
+.ombre{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    border-radius: 50%;
+    border: solid 1px lightgrey;
+    background-color: lightgrey;
+    pointer-events: none;
+    transition: all 500ms ease-out;
+}
