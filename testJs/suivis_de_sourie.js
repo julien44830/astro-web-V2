@@ -1,16 +1,19 @@
-console.log('hello world');
-    const ombre = document.createElement("div");
 
 
-window.addEventListener('mousemove', e => {
+const ombre = document.createElement("div");
+
+document.body.appendChild(ombre);
+
+
+document.body.addEventListener("mousemove", e => {
+    console.log(e);
+    console.log('hello world');
+    console.log("pageX: ", e.pageX, 
+    "pageY: ", e.pageY, 
+    "clientX: ", e.clientX, 
+    "clientY:", e.clientY);
 
     ombre.classList = "ombre";
-    document.body.appendChild(ombre);
-
-    // console.log("pageX: ", e.pageX, 
-    // "pageY: ", e.pageY, 
-    // "clientX: ", e.clientX, 
-    // "clientY:", e.clientY)
-
-    ombre.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+    ombre.style.left = e.clientX + "px",
+    ombre.style.top = e.clientY + "px";
 });
