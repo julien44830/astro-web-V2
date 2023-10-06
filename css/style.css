@@ -10,6 +10,16 @@ body{
 
 h1{
     text-align: center;
+    animation: color alternate 1s;
+}
+
+@keyframes color{
+    from{
+        color:red;
+    }
+    to{
+        color:blue;
+    }
 }
 
 .ombre{
@@ -20,4 +30,23 @@ h1{
     background-color: rgba(60, 179, 113, 0.4);
     pointer-events: none;
     transition: all 350ms ease-out;
+    display: block;
+}
+
+.ombre2{
+    animation: smooth 2s ;
+}
+
+@keyframes smooth {
+   from{
+    width: 50px;
+    height: 50px;
+   };
+   to{
+    width: 0px;
+    height: 0px;
+
+   }
+
+    
 }
