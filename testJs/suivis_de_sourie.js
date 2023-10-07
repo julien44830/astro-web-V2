@@ -1,4 +1,5 @@
 const ombre = document.createElement("div");
+document.body.appendChild(ombre);
 
 
 document.addEventListener("mouseout", e => {
@@ -12,7 +13,6 @@ document.addEventListener("mouseout", e => {
 });
 
 document.body.addEventListener("mousemove", e => {
-    document.body.appendChild(ombre);
 
 
     ombre.classList.remove('ombre2');
