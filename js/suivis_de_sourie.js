@@ -4,7 +4,6 @@ document.body.appendChild(ombre);
 
 document.addEventListener("mouseout", e => {
 
-    console.log('je suis sortie');
     ombre.classList.add('ombre2');
 
     setTimeout(() => {
@@ -21,5 +20,4 @@ document.body.addEventListener("mousemove", e => {
     ombre.style.left = e.clientX + -18 + "px",
     ombre.style.top = e.clientY + -18 + "px";
 
-    e.stopPropagation();
 });
