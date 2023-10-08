@@ -1,11 +1,6 @@
-
-
 const ombre = document.createElement("div");
 const img = document.createElement("img");
 img.src = "../images/lune_cursor.png";
-
-// const switchTheme = document.querySelector("#hide-checkbox");
-console.log(switchTheme)
 
 switchTheme.addEventListener("change", function() {
     if (switchTheme.checked) {
@@ -14,7 +9,6 @@ switchTheme.addEventListener("change", function() {
         img.src = "../images/soleil_cursor.png";
     }
 });
-
 
 img.style.display = "none";
 document.body.appendChild(ombre);
@@ -27,25 +21,18 @@ document.addEventListener("mouseout", e => {
     e.stopImmediatePropagation;
     img.classList.add('ombre2');
     ombre.classList.add('ombre2');
-    img.style.display = "none";
-
-
 
     setTimeout(() => {
         img.classList.remove('ombre');
         ombre.classList.add('ombre2');
         img.style.display = "none";
-
-
-    }, 500);
+    }, 700);
 });
 
 window.addEventListener("mousemove", e => {
     ombre.style.pointerEvents = "none";
 
     const x = e.clientX;
-    const pY = e.clientY;
-
     const y = window.innerHeight - e.clientY; // Inversez la coordonnée Y
 
     const windowWidth = window.innerWidth;
@@ -67,10 +54,5 @@ window.addEventListener("mousemove", e => {
         img.style.left = e.clientX - 18 + "px";
         img.style.top = e.clientY - 18 + "px";
         img.style.height = normalizedDiagonalPosition *45 + "px";
-        // img.style.width = normalizedDiagonalPosition *45 + "px";
         img.style.opacity = normalizedDiagonalPosition -0.3;
-
-        // Appliquer pointer-events: none uniquement à l'ombre pendant le suivi de la souris
-        ombre.style.pointerEvents = "none";
-        img.style.pointerEvents = "none";
 });
