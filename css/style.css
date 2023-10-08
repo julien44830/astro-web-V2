@@ -40,3 +40,7 @@ h1{
 img{
     dislpay:none;
 }
+
+.stop{
+    pointer-events: none;;
+}
