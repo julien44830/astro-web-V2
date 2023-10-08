@@ -1,22 +1,51 @@
+
+
 const ombre = document.createElement("div");
 const img = document.createElement("img");
+img.src = "../images/lune_cursor.png";
+
+// const switchTheme = document.querySelector("#hide-checkbox");
+console.log(switchTheme)
+
+switchTheme.addEventListener("change", function() {
+    if (switchTheme.checked) {
+        img.src = "../images/lune_cursor.png";
+    } else {
+        img.src = "../images/soleil_cursor.png";
+    }
+});
+
 
 img.style.display = "none";
-img.src = "../images/lune_cursor.png";
 document.body.appendChild(ombre);
 ombre.appendChild(img);
-ombre.style.position = "absolute";  // Assurez-vous que l'élément ombre a une position absolue
 
 document.addEventListener("mouseout", e => {
+    ombre.style.pointerEvents = "none";
+    img.style.pointerEvents = "none";
+
+    e.stopImmediatePropagation;
     img.classList.add('ombre2');
+    ombre.classList.add('ombre2');
+    img.style.display = "none";
+
+
 
     setTimeout(() => {
-        ombre.classList.remove('ombre');
+        img.classList.remove('ombre');
+        ombre.classList.add('ombre2');
+        img.style.display = "none";
+
+
     }, 500);
 });
 
-document.body.addEventListener("mousemove", e => {
+window.addEventListener("mousemove", e => {
+    ombre.style.pointerEvents = "none";
+
     const x = e.clientX;
+    const pY = e.clientY;
+
     const y = window.innerHeight - e.clientY; // Inversez la coordonnée Y
 
     const windowWidth = window.innerWidth;
@@ -29,13 +58,6 @@ document.body.addEventListener("mousemove", e => {
     console.log("Position normalisée : " + normalizedDiagonalPosition);    
         // Utilisez la valeur normalisée comme vous le souhaitez
 
-
-
-    const normalizedX = e.clientX / window.innerWidth;
-    const normalizedZ = e.clientZ / window.innerWidth;
-    const normalised = normalizedX + normalizedZ / 2 ;
-
-
     img.style.display = "block";
     // console.log("x = " + e.clientX + "  y = " + e.clientY);
 
@@ -44,17 +66,11 @@ document.body.addEventListener("mousemove", e => {
 
         img.style.left = e.clientX - 18 + "px";
         img.style.top = e.clientY - 18 + "px";
-        img.style.height = e.clientX /20 + "px";
-        img.style.width = e.clientX /20 + "px";
-        img.style.opacity = normalizedDiagonalPosition;
-
-    
-
-        // ombre.style.background = "rgba(60, 179, 113, 0." + e.clientX  + 50%e.clientX+")";
-        // background: rgba(0, 0, 0, 0.4);
-
+        img.style.height = normalizedDiagonalPosition *45 + "px";
+        // img.style.width = normalizedDiagonalPosition *45 + "px";
+        img.style.opacity = normalizedDiagonalPosition -0.3;
 
         // Appliquer pointer-events: none uniquement à l'ombre pendant le suivi de la souris
         ombre.style.pointerEvents = "none";
-
+        img.style.pointerEvents = "none";
 });
