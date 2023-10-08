@@ -1,0 +1,64 @@
+.ombre{
+    position: fixed;
+    border-radius: 50%;
+    background-image: url(../images/lune_cursor.png);
+    pointer-events: none;
+    transition: all 350ms ease-out;
+    display: block;
+    animation: smooth1 250ms ease-out;
+    z-index: 10000;
+    max-width: 45px;
+    max-height: 45px;
+}
+
+@keyframes smooth1 {
+    0%{
+        width: 0px;
+        height: 0px;
+    };
+
+    50%{
+        width: 10px;
+        height: 10px;
+    
+    }
+    75%{
+        width: 25px;
+        height: 25px;
+    }
+    100%{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.ombre2{
+    animation: smooth2 1500ms ease-out;
+    position: fixed;
+    border-radius: 50%;
+    margin : 10px;
+    pointer-events: none;
+
+}
+
+@keyframes smooth2 {
+  0%{
+    width: 50px;
+    height: 50px;
+   };
+
+50%{
+    width: 25px;
+    height: 25px;
+
+}
+   90%{
+    width: 1px;
+    height: 1px;
+   }
+100%{
+    width: 0px;
+    height: 0px;
+
+}
+}
