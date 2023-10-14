@@ -6,7 +6,7 @@ switchTheme.addEventListener("change", function() {
     if (switchTheme.checked) {
         img.src = "../images/lune_cursor.png";
     } else {
-        img.src = "../images/soleil_cursor.png";
+        img.src = "../images/soleil_cursor.webp";
     }
 });
 
