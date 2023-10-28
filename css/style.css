@@ -6,7 +6,7 @@
 body{
     width: 100%;
     height: 100vh;
-    pointer-events: none;
+    margin-left: 50px;
 }
 
 .body2{
@@ -34,13 +34,8 @@ h1{
     top: 40px;
     right : 90px ; 
     pointer-events: auto;
-
 }
 
 img{
-    dislpay:none;
-}
-
-.stop{
-    pointer-events: none;;
+    display: none;
 }

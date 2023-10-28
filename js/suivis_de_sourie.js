@@ -30,6 +30,7 @@ document.addEventListener("mouseout", e => {
 });
 
 window.addEventListener("mousemove", e => {
+    e.stopPropagation();
     ombre.style.pointerEvents = "none";
 
     const x = e.clientX;
