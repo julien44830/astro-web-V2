@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>astro web V2</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-site-verification" content="yxpTgCnbeUD3MNgi4d1e5eI_ifKJwBYCIjO5Za6VPdY" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/switch.css">
+        <link rel="stylesheet" href="css/lune.css">
+        <title>Astronomia 2 </title>
+    </head>
+<body class="pointerEvent">
+    <div class="">
+        <div >
+            <h1 class="">site en cours de réalisation</h1> 
+        </div>
 
-
-    <div>
-        <h1>site en cours de réalisation</h1> 
-    </div>
+        <div class="theme">
+            <div class="wrapper ">
+                <input type="checkbox" id="hide-checkbox" class="" checked>
+                <label for="hide-checkbox" class="toggle ">
+                    <span class="toggle-button stop">
+                    <span class="crater crater-1"></span>
+                    <span class="crater crater-2"></span>
+                    <span class="crater crater-3"></span>   
+                    <span class="crater crater-4"></span>
+                    <span class="crater crater-5"></span>
+                    <span class="crater crater-6"></span>
+                    <span class="crater crater-7"></span>
+                    </span>
+                    <span class="star star-1"></span>
+                    <span class="star star-2"></span>
+                    <span class="star star-3"></span>
+                    <span class="star star-4"></span>
+                    <span class="star star-5"></span>
+                    <span class="star star-6"></span>
+                    <span class="star star-7"></span>
+                    <span class="star star-8"></span>
+                </label>
+            </div>
+        </div>
 
     <div>
         <a href="test.html">test</a>
@@ -18,7 +48,7 @@
 
 </div>
     
-    <div id="av-orbit">
+    <div id="av-orbit" class="pointerEvent">
         <script>
             var avOrbitProperties = {
                 size: 'large',
@@ -61,5 +91,11 @@
         <script src="https://astroviewer.net/widgets/widgets/skymap.js"></script>
     </div>
 
+            <!--Incluez votre script JavaScript ici -->
+            <script src="dist/bundle.js" defer></script>
+            <script type="module" src="app.js"></script>
+            <script src="js/script.js" defer></script>
+            <script src="js/switch.js"></script>
+            <script src="js/suivis_de_sourie.js"></script>
 </body>
 </html>

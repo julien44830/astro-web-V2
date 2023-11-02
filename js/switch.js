@@ -7,11 +7,14 @@ function theme() {
         for (const element of body2Elements) {
             element.classList.remove('body2');
         }
+        console.log('1');
     } else {
         console.log(switchTheme.checked);
         for (const element of body2Elements) {
             element.classList.add('body2');
         }
+        console.log('2');
+
     }
 }
 
