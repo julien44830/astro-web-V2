@@ -14,20 +14,6 @@ img.style.display = "none";
 document.body.appendChild(ombre);
 ombre.appendChild(img);
 
-// document.addEventListener("mouseout", e => {
-//     img.style.pointerEvents = "none";
-
-//     e.stopImmediatePropagation;
-//     img.classList.add('ombre2');
-//     ombre.classList.add('ombre2');
-
-//     setTimeout(() => {
-//         img.classList.remove('ombre');
-//         ombre.classList.add('ombre2');
-//         img.style.display = "none";
-//     }, 700);
-// });
-
 window.addEventListener("mousemove", e => {
     e.stopPropagation();
     ombre.style.pointerEvents = "none";
