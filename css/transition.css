@@ -20,7 +20,10 @@
         height: 100vh;
         transform: scale(1);
         opacity: 1; 
-
+    }
+    70%{
+        border: 100%;
+        opacity: 0; 
     }
     100% {
         top: 50%;
@@ -35,6 +38,7 @@
 
 @keyframes transition2 {
     0% {
+        border-radius: 100%;
         top: 50%;
         left: 50%;
         width: 0vw;
@@ -42,7 +46,10 @@
         transform: scale(0);
         opacity: 0; 
     }
-
+    70%{
+        border: 100%;
+        opacity: 0; 
+    }
     100% {
         top: 0%;
         left: 0%;
