@@ -3,16 +3,51 @@ const img = document.createElement("img");
 img.src = "../images/lune_cursor.png";
 
 switchTheme.addEventListener("change", function() {
-    if (switchTheme.checked) {
-        img.src = "../images/lune_cursor.png";
-    } else {
-        img.src = "../images/soleil_cursor.webp";
-    }
+    img.src = switchTheme.checked ? "../images/lune_cursor.png" : "../images/soleil_cursor.webp";
 });
 
+img.style.position = "fixed";
 img.style.display = "none";
 document.body.appendChild(ombre);
 ombre.appendChild(img);
+
+let mouseX = 0;
+let mouseY = 0;
+
+function updatePosition() {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    const targetX = mouseX;
+    const targetY = mouseY;
+
+    const normalizedDiagonalPosition = (targetX + targetY) / (windowWidth + windowHeight);
+
+    img.classList.remove('ombre2');
+    img.classList.add("ombre");
+
+    img.style.display = "block";
+    img.style.left = targetX - 18 + "px";
+    img.style.top = targetY - 18 + "px";
+    img.style.height = normalizedDiagonalPosition * 45 + "px";
+    img.style.opacity = normalizedDiagonalPosition - 0.3;
+
+    requestAnimationFrame(updatePosition);
+}
+
+window.addEventListener("mousemove", e => {
+    e.stopPropagation();
+    ombre.style.pointerEvents = "none";
+
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+updatePosition();
+
+
+
+
 
 // window.addEventListener("mousemove", e => {
 //     e.stopPropagation();
@@ -42,26 +77,3 @@ ombre.appendChild(img);
 //         img.style.height = normalizedDiagonalPosition *45 + "px";
 //         img.style.opacity = normalizedDiagonalPosition -0.3;
 // });
-
-
-window.addEventListener("mousemove", e => {
-    e.stopPropagation();
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-    ombre.style.pointerEvents = "none";
-
-    const x = e.clientX;
-    const y = window.innerHeight - e.clientY; // Inversez la coordonnée Y
-    console.log(x,y);
-
-    // Calculez la position normalisée le long de la diagonale inversée
-    const normalizedDiagonalPosition = (x + y) / (windowWidth + windowHeight);
-
-    img.classList.remove('ombre2');
-    img.classList.add("ombre");
-    img.style.display = "block";
-    img.style.left = x - 18 + "px";
-    img.style.top = e.clientY - 18 + "px";
-    img.style.height = normalizedDiagonalPosition * 45 + "px";
-    img.style.opacity = normalizedDiagonalPosition - 0.3;
-});
