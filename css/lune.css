@@ -37,9 +37,6 @@
     margin : 10px;
 }
 
-img{
-    pointer-events: none;
-}
 
 @keyframes smooth2 {
     0%{
