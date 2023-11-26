@@ -21,7 +21,7 @@ function updatePosition() {
     const targetX = mouseX;
     const targetY = mouseY;
 
-    const normalizedDiagonalPosition = (targetX + targetY) / (windowWidth + windowHeight);
+    const normalizedDiagonalPosition = (mouseX + (windowHeight - mouseY)) / (windowWidth + windowHeight);
 
     img.classList.remove('ombre2');
     img.classList.add("ombre");
@@ -59,12 +59,12 @@ updatePosition();
 //     const windowWidth = window.innerWidth;
 //     const windowHeight = window.innerHeight;
 
-//     // Calculez la position normalisée le long de la diagonale inversée
-//     const normalizedDiagonalPosition = (x + y) / (windowWidth + windowHeight);
+    // Calculez la position normalisée le long de la diagonale inversée
+    // const normalizedDiagonalPosition = (x + y) / (windowWidth + windowHeight);
 
-//     // La valeur sera entre 0 (coin inférieur gauche) et 1 (coin supérieur droit)
-//     console.log("Position normalisée : " + normalizedDiagonalPosition);    
-//         // Utilisez la valeur normalisée comme vous le souhaitez
+    // // La valeur sera entre 0 (coin inférieur gauche) et 1 (coin supérieur droit)
+    // console.log("Position normalisée : " + normalizedDiagonalPosition);    
+        // Utilisez la valeur normalisée comme vous le souhaitez
 
 //     img.style.display = "block";
 //     // console.log("x = " + e.clientX + "  y = " + e.clientY);
