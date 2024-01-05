@@ -20,14 +20,14 @@ h1{
     animation: color alternate 1s;
 }
 
-@keyframes color{
+/* @keyframes color{
     from{
         color:red;
     }
     to{
         color:blue;
     }
-}
+} */
 
 .theme{
     position:fixed;

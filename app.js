@@ -12,7 +12,7 @@ const moonPos = moonposition.position(jd);
 // Affichez les résultats dans la page HTML
 const resultElement = document.getElementById("result");
 resultElement.innerHTML = `
-  <p>${jd}</p>
+  <p>dans le calendrier julian, nous sommes le jour : ${jd}</p>
   <p>Position du Soleil : Ascension droite ${sunPos.ra}°, Déclinaison ${sunPos.dec}°</p>
   <p>Position de la Lune : Ascension droite ${moonPos.ra}°, Déclinaison ${moonPos.dec}°</p>
 `;

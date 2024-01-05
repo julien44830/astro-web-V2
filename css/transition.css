@@ -63,3 +63,9 @@
         opacity: 1; 
     }
 }
+
+/*******************************************************/
+
+.transitioning {
+    animation: transition2 1.5s ease-in-out forwards;
+  }
