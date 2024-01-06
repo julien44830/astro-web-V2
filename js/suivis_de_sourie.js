@@ -35,6 +35,19 @@ function updatePosition() {
     requestAnimationFrame(updatePosition);
 }
 
+document.addEventListener("mouseout", () => {
+    img.style.display = "none";
+});
+
+document.addEventListener("mouseenter", () => {
+    img.style.display = "block";
+});
+
+document.addEventListener("mouseleave", () => {
+    img.style.display = "none";
+});
+
+
 document.addEventListener("mousemove", e => {
     e.stopPropagation();
     ombre.style.pointerEvents = "none";

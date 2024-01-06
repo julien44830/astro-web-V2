@@ -8,6 +8,14 @@ function actualiser() {
     var heure   = date.getHours();
     var minute  = date.getMinutes();
     var seconde = date.getSeconds();
+    
+    if (mois <= 9) {
+        mois = "0" + mois;
+    }    
+    
+    if (jour <= 9) {
+        jour = "0" + jour ;
+    }
 
     if (seconde <= 9) {
         seconde = "0" + seconde;
