@@ -35,3 +35,7 @@ h1{
     right : 90px ; 
     pointer-events: auto;
 }
+
+.data-elfsight-app-lazy{
+    display: none;
+}
