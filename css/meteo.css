@@ -1,0 +1,17 @@
+#meteo{
+    position: fixed;
+    top: 90px;
+    right: 40px;
+}
+
+
+.wlv{
+    background-color: #39393985 !important;
+    color: white !important;
+}
+
+#idc100a5bd966.wlv .wlv__name, #idc100a5bd966.wlv .wlv__conditions, #idc100a5bd966.wlv .wlv__current, #idc100a5bd966.wlv .wlv__param, #idc100a5bd966.wlv .wlv__forecastItem:nth-child(even){
+    background-color: #3939390d !important;
+    color: white !important;
+}  
+

@@ -1,0 +1,12 @@
+@media print {
+    /* Cacher tous les éléments */
+    body * {
+      visibility: hidden;
+    }
+  
+    /* Afficher l'élément contenant la carte du ciel */
+    #av-skymap {
+      visibility: visible;
+    }
+  }
+  

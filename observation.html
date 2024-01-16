@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/style_observation.css">
     <link rel="stylesheet" href="css/switch.css">
     <link rel="stylesheet" href="css/lune.css">
+    <link rel="stylesheet" href="css/meteo.css">
+    <link rel="stylesheet" href="css/print.css">
     <title>Astronomia 2 </title>
 
     <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.0/build/global/luxon.min.js"></script>
@@ -108,7 +110,9 @@
                             var astroViewer = new AstroViewer(avSkymapProperties);
                             astroViewer.init();
             </script>
-        </div>
+
+</div>
+<input type="button" value="Imprimer la carte du ciel" onclick="window.print()">
 
         
 
