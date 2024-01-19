@@ -1,134 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="yxpTgCnbeUD3MNgi4d1e5eI_ifKJwBYCIjO5Za6VPdY" />
-    <link rel="icon" href="images/logo.png">
-    
-    <link rel="stylesheet" href="css/transition.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style_observation.css">
-    <link rel="stylesheet" href="css/switch.css">
-    <link rel="stylesheet" href="css/lune.css">
-    <link rel="stylesheet" href="css/meteo.css">
-    <link rel="stylesheet" href="css/print.css">
-    <title>Astronomia 2 </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="yxpTgCnbeUD3MNgi4d1e5eI_ifKJwBYCIjO5Za6VPdY" />
+<link rel="icon" href="images/logo.png">
 
-    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.0/build/global/luxon.min.js"></script>
-
+<link rel="stylesheet" href="css/transition.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style_observation.css">
+<link rel="stylesheet" href="css/switch.css">
+<link rel="stylesheet" href="css/lune.css">
+<link rel="stylesheet" href="css/meteo.css">
+<link rel="stylesheet" href="css/print.css">
+<title>Astronomia 2 </title>
+<script src="https://cdn.jsdelivr.net/npm/luxon@2.0.0/build/global/luxon.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
 </head>
 
 <body class="pointerEvent">
-    <div class="">
-        <div >
-            <h1 class="">Astronomia</h1> 
-        </div>
+	<div class="">
+	
+	<div >
+		<h1 class="">Astronomia</h1> 
+	</div>
 
-        <div class="theme">
-            <div class="wrapper ">
-                <input type="checkbox" id="hide-checkbox" class="" checked>
-                <label for="hide-checkbox" class="toggle ">
-                    <span class="toggle-button stop">
-                    <span class="crater crater-1"></span>
-                    <span class="crater crater-2"></span>
-                    <span class="crater crater-3"></span>   
-                    <span class="crater crater-4"></span>
-                    <span class="crater crater-5"></span>
-                    <span class="crater crater-6"></span>
-                    <span class="crater crater-7"></span>
-                    </span>
-                    <span class="star star-1"></span>
-                    <span class="star star-2"></span>
-                    <span class="star star-3"></span>
-                    <span class="star star-4"></span>
-                    <span class="star star-5"></span>
-                    <span class="star star-6"></span>
-                    <span class="star star-7"></span>
-                    <span class="star star-8"></span>
-                </label>
-            </div>
-        </div>
+	<div class="theme">
+		<div class="wrapper ">
+			<input type="checkbox" id="hide-checkbox" class="" checked>
+			<label for="hide-checkbox" class="toggle ">
+				<span class="toggle-button stop">
+				<span class="crater crater-1"></span>
+				<span class="crater crater-2"></span>
+				<span class="crater crater-3"></span>   
+				<span class="crater crater-4"></span>
+				<span class="crater crater-5"></span>
+				<span class="crater crater-6"></span>
+				<span class="crater crater-7"></span>
+				</span>
+				<span class="star star-1"></span>
+				<span class="star star-2"></span>
+				<span class="star star-3"></span>
+				<span class="star star-4"></span>
+				<span class="star star-5"></span>
+				<span class="star star-6"></span>
+				<span class="star star-7"></span>
+				<span class="star star-8"></span>
+			</label>
+		</div>
+	</div>
 
-        <div>
-            <a href="index.html">accueil</a>
-        </div>
+	<div class="menu">
+		<a href="index.html">accueil</a>
+	</div>
 
-        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+	<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 
-        <div id="meteo">
-            <div id="idc100a5bd966" a='{"t":"v","v":"1.2","lang":"fr","locs":[7],"ssot":"c","sics":"ds","cbkg":"#9E9E9E","cfnt":"#FFFFFF","cprb":"#616161","cprf":"#FFFFFF","slmw":226,"slbr":4,"slfs":20,"sfnt":"a"}'>Source des données météo: <a href="https://meteolabs.fr/meteo_nantes/demain/">prévisions pour demain à Nantes</a></div>
-            <script async src="https://static1.meteolabs.fr/widgetjs/?id=idc100a5bd966"></script>
+	<div id="meteo">
+		<div id="idc100a5bd966" a='{"t":"v","v":"1.2","lang":"fr","locs":[7],"ssot":"c","sics":"ds","cbkg":"#9E9E9E","cfnt":"#FFFFFF","cprb":"#616161","cprf":"#FFFFFF","slmw":226,"slbr":4,"slfs":20,"sfnt":"a"}'>Source des données météo: <a href="https://meteolabs.fr/meteo_nantes/demain/">prévisions pour demain à Nantes</a></div>
+			<script async src="https://static1.meteolabs.fr/widgetjs/?id=idc100a5bd966"></script>
+	</div>
 
-        </div>
+	<div class="iss">
+		<div class="iss2">
+			<div id="av-passes">
+				<script>
+					var avPassesProperties = {
+					lon:   2.323,
+					lat:   48.879,
+					name:  'Europe',
+					tz:    'Europe/nantes',
+					lang:  'en',
+					clock: '24h'
+					};
+				</script>
+				<script src="https://www.astroviewer.net/widgets/widgets/passes.js"></script>
+			</div>
+		</div>
 
-        <div id="av-orbit" class="pointerEvent">
-            <script>
-                var avOrbitProperties = {
-                    size: 'large',
-                    lang: 'en'
-                };
-            </script>
-            <script src="https://astroviewer.net/widgets/widgets/orbit.js"></script>
-        </div>
+		<div class="iss2">
+			<div id="av-orbit" class="pointerEvent">
+				<script>
+					var avOrbitProperties = {
+						size: 'large',
+						lang: 'en'
+					};
+				</script>
+					<script src="https://astroviewer.net/widgets/widgets/orbit.js"></script>
+			</div>
+		</div>
+	</div>
 
-        <div id="av-passes">
-            <script>
-                    var avPassesProperties = {
-                    lon:   2.323,
-                    lat:   48.879,
-                    name:  'Europe',
-                    tz:    'Europe/nantes',
-                    lang:  'en',
-                    clock: '24h'
-                };
-            </script>
-            <script src="https://www.astroviewer.net/widgets/widgets/passes.js"></script>
-        </div>
+	<div id="av-skymap">
+		<script src="https://www.astroviewer.net/widgets/widgets/skymap.js"></script>
+		<script src="js/location.js"></script>
+		<script>
+			avSkymapProperties = {
+					location: {
+							lon: longitude,
+							lat: latitude,
+							name: 'localisation',
+							tz: 'localisation'
+					},
+					deco: 16399,
+					size: 600,
+					bgColor: '#ffffff',
+					lang: 'fr'
+			};
+			// Initialiser le widget AstroViewer avec les propriétés mises à jour
+			var astroViewer = new AstroViewer(avSkymapProperties);
+			astroViewer.init();
+		</script>
+	</div>
+	<input type="button" value="Imprimer la carte du ciel" onclick="window.print()">
 
-        <div id="av-skymap">
-            <script src="https://www.astroviewer.net/widgets/widgets/skymap.js"></script>
-            <script src="js/location.js"></script>
-            <!-- Script pour obtenir les coordonnées géographiques de l'utilisateur -->
-            <script>
-        
-                            // Mettez à jour les propriétés du widget avec les coordonnées obtenues
-                            avSkymapProperties = {
-                                location: {
-                                    lon: longitude,
-                                    lat: latitude,
-                                    name: 'localisation',
-                                    tz: 'localisation'
-                                },
-                                deco: 16399,
-                                size: 600,
-                                bgColor: '#ffffff',
-                                lang: 'fr'
-                            };
-        
-                            // Initialiser le widget AstroViewer avec les propriétés mises à jour
-                            var astroViewer = new AstroViewer(avSkymapProperties);
-                            astroViewer.init();
-            </script>
+	<div class="transition">
+		<img src="images/transition.png" alt="eclipse">
+	</div>
 
-</div>
-<input type="button" value="Imprimer la carte du ciel" onclick="window.print()">
-
-        
-
-    <div class="transition">
-        <img src="images/transition.png" alt="eclipse">
-    </div>
-
-    <script src="dist/bundle.js" defer></script>
-    <script type="module" src="app.js"></script>
-    <script src="js/script.js" defer></script>
-    <script src="js/switch.js"></script>
-    <!-- <script src="js/suivis_de_sourie.js"></script> -->
-    <script src="js/transition.js"></script>
-    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-    <script src="js/location.js"></script>
-    <script src="js/meteo.js"></script>
+	<script src="dist/bundle.js" defer></script>
+	<script type="module" src="app.js"></script>
+	<script src="js/script.js" defer></script>
+	<script src="js/switch.js"></script>
+	<!-- <script src="js/suivis_de_sourie.js"></script> -->
+	<script src="js/transition.js"></script>
+	<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+	<script src="js/location.js"></script>
+	<script src="js/meteo.js"></script>
 
 </body>
 </html>
