@@ -37,9 +37,6 @@ function setTheme(isLightTheme) {
 }
 
 
-.032+
-6
-
 // Fonction pour basculer le thème et enregistrer l'état dans le localStorage
 function toggleTheme(isLightTheme) {
   setTheme(isLightTheme);
@@ -81,5 +78,3 @@ setInterval(function () {
     }
   }
 }, 1000 * 60 * 60); // Met à jour toutes les heures (3600000 millisecondes)
-
-
