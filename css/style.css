@@ -20,14 +20,27 @@ body{
     position: fixed;
     margin-left: -150px;
     font-weight: bold;
-    border-right: 1px solid white;
     padding-right:20px;
+}
 
+.menuLight{
+    border-right: 1px solid black;
+}
+
+.menuDark{
+    border-right: 1px solid white;
 }
 
 .menu>a{
     text-decoration: none;
     letter-spacing: 1.5px;
+}
+
+.aLight{
+    color: black;
+}
+
+.aDark {
     color: white;
 }
 

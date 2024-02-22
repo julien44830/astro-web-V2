@@ -2,17 +2,44 @@
 
 const switchTheme = document.querySelector("#hide-checkbox");
 const body2Elements = document.getElementsByClassName("pointerEvent");
+const links = document.querySelectorAll('a');
+const borderMenu = document.getElementsByClassName('menu');
+
 
 // Fonction pour changer le thème
 function setTheme(isLightTheme) {
   if (isLightTheme) {
-    for (const element of body2Elements) {
+    for (const element of body2Elements || a) {
       element.classList.remove('body2');
     }
+
+    for (const link of links || a) {
+      link.classList.add('aLight');
+      link.classList.remove('aDark');
+    }
+
+    for (const borderMenus of borderMenu || a) {
+      borderMenus.classList.add('menuLight');
+      borderMenus.classList.remove('menuDark');
+    }
+
+
   } else {
-    for (const element of body2Elements) {
+    for (const element of body2Elements || a) {
       element.classList.add('body2');
     }
+
+    for (const link of links || a) {
+      link.classList.remove('aLight');
+      link.classList.add('aDark');
+    }
+
+    for (const borderMenus of borderMenu || a) {
+      borderMenus.classList.add('menuDark');
+      borderMenus.classList.remove('menuLight');
+    }
+
+
   }
 }
 
@@ -57,5 +84,3 @@ setInterval(function () {
     }
   }
 }, 1000 * 60 * 60); // Met à jour toutes les heures (3600000 millisecondes)
-
-
