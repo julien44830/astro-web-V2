@@ -35,9 +35,9 @@ function updatePosition() {
     requestAnimationFrame(updatePosition);
 }
 
-document.addEventListener("mouseout", () => {
-    img.style.display = "none";
-});
+// document.addEventListener("mouseout", () => {
+//     img.style.display = "none";
+// });
 
 document.addEventListener("mouseenter", () => {
     img.style.display = "block";
