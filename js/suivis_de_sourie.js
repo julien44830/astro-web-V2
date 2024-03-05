@@ -36,8 +36,6 @@ function updatePosition() {
     requestAnimationFrame(updatePosition);
 }
 
-
-//ce code fait buguer la div qui suis la sourie
 // document.addEventListener("mouseout", () => {
 //     img.style.display = "none";
 // });

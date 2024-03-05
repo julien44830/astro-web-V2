@@ -21,7 +21,14 @@ body{
     margin-left: -150px;
     font-weight: bold;
     padding-right:20px;
+
+.menuLight{
+    border-right: 1px solid black;
 }
+
+.menuDark{
+    border-right: 1px solid white;
+  }
 
 .menu>a{
     text-decoration: none;
@@ -35,8 +42,7 @@ body{
 
 .aDark {
     color: white; /* Couleur du texte pour le thème foncé */
-    border-right: 1px solid white;
-}
+    border-right: 1px solid hite;
 
 .menu>a:hover{
     text-decoration: underline;

@@ -6,35 +6,37 @@ const borderMenu = document.getElementsByClassName('menu');
 // Fonction pour changer le thème
 function setTheme(isLightTheme) {
   if (isLightTheme) {
-    for (const element of body2Elements) {
+    for (const element of body2Elements || a) {
       element.classList.remove('body2');
     }
 
-    for (const link of links) {
+    for (const link of links || a) {
+
       link.classList.add('aLight');
       link.classList.remove('aDark');
     }
 
-    for (const borderMenuElement of borderMenu) {
-      borderMenuElement.classList.add('menuLight');
-      borderMenuElement.classList.remove('menuDark');
-    }
+
+    for (const borderMenus of borderMenu || a) {
+      borderMenus.classList.add('menuLight');
+      borderMenus.classList.remove('menuDark');
+   
   } else {
-    for (const element of body2Elements) {
+    for (const element of body2Elements || a) {
       element.classList.add('body2');
     }
 
-    for (const link of links) {
+    for (const link of links || a) {
       link.classList.remove('aLight');
       link.classList.add('aDark');
     }
 
-    for (const borderMenuElement of borderMenu) {
-      borderMenuElement.classList.add('menuDark');
-      borderMenuElement.classList.remove('menuLight');
+    for (const borderMenus of borderMenu || a) {
+      borderMenus.classList.add('menuDark');
+      borderMenus.classList.remove('menuLight');
     }
+
   }
-}
 
 
 // Fonction pour basculer le thème et enregistrer l'état dans le localStorage

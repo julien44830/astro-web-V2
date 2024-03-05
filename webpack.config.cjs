@@ -1,13 +1,25 @@
 const path = require('path');
 
 module.exports = {
-  entry: ['./app.js'],
+  mode: 'development', // Définir le mode de construction
+  entry: './app.js', // Point d'entrée de votre application
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'), // Dossier de sortie
+    filename: 'bundle.js' // Nom du fichier de sortie
   },
-  mode: 'development',
-  experiments: {
-    topLevelAwait: true,
-  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/, // Appliquer ce loader aux fichiers .js
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader', // Utiliser babel pour transpiler le code
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+      // Vous pouvez ajouter d'autres loaders pour gérer les CSS, les images, etc.
+    ]
+  }
 };
