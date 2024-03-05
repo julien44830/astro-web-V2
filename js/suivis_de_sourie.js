@@ -2,6 +2,7 @@ const ombre = document.createElement("div");
 const img = document.createElement("img");
 img.src = "../images/lune_cursor.png";
 
+
 switchTheme.addEventListener("change", function() {
     img.src = switchTheme.checked ? "../images/lune_cursor.png" : "../images/soleil_cursor.webp";
 });
@@ -35,9 +36,11 @@ function updatePosition() {
     requestAnimationFrame(updatePosition);
 }
 
-document.addEventListener("mouseout", () => {
-    img.style.display = "none";
-});
+
+//ce code fait buguer la div qui suis la sourie
+// document.addEventListener("mouseout", () => {
+//     img.style.display = "none";
+// });
 
 document.addEventListener("mouseenter", () => {
     img.style.display = "block";
