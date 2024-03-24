@@ -4,7 +4,7 @@
 }
 
 body{
-    width: 100%;
+    width: 83vw;
     height: 100vh;
     margin-left: 200px;
     margin-right: 200px;
@@ -18,9 +18,11 @@ body{
 
 .menu{
     position: fixed;
+    display: block;
     margin-left: -150px;
     font-weight: bold;
     padding-right:20px;
+}
 
 .menuLight{
     border-right: 1px solid black;
@@ -38,11 +40,13 @@ body{
 .aLight {
     color: black; /* Couleur du texte pour le thème clair */
     border-right: 1px solid black;
+    display: block;
 }
 
 .aDark {
     color: white; /* Couleur du texte pour le thème foncé */
     border-right: 1px solid hite;
+}
 
 .menu>a:hover{
     text-decoration: underline;
