@@ -2,6 +2,7 @@ const ombre = document.createElement("div");
 const img = document.createElement("img");
 img.src = "../images/lune_cursor.png";
 
+
 switchTheme.addEventListener("change", function() {
     img.src = switchTheme.checked ? "../images/lune_cursor.png" : "../images/soleil_cursor.webp";
 });

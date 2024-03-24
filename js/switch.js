@@ -1,10 +1,7 @@
-// ce code fonctionne et enregistre le thème dans le local storage
-
 const switchTheme = document.querySelector("#hide-checkbox");
 const body2Elements = document.getElementsByClassName("pointerEvent");
 const links = document.querySelectorAll('a');
 const borderMenu = document.getElementsByClassName('menu');
-
 
 // Fonction pour changer le thème
 function setTheme(isLightTheme) {
@@ -14,16 +11,16 @@ function setTheme(isLightTheme) {
     }
 
     for (const link of links || a) {
+
       link.classList.add('aLight');
       link.classList.remove('aDark');
     }
 
+
     for (const borderMenus of borderMenu || a) {
       borderMenus.classList.add('menuLight');
       borderMenus.classList.remove('menuDark');
-    }
-
-
+   
   } else {
     for (const element of body2Elements || a) {
       element.classList.add('body2');
@@ -39,9 +36,8 @@ function setTheme(isLightTheme) {
       borderMenus.classList.remove('menuLight');
     }
 
-
   }
-}
+
 
 // Fonction pour basculer le thème et enregistrer l'état dans le localStorage
 function toggleTheme(isLightTheme) {
